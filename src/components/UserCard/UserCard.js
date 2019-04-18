@@ -3,6 +3,17 @@ import propTypes from 'prop-types';
 
 import "./style.css"
 
+
+/*
+function UserCardInfo({ children, emoji }) {
+    return (
+        <p className="user-card__info">
+            <span className="user-card__info-emoji">{emoji}</span>
+            {children}
+        </p>
+    )
+}*/
+
 class UserCard extends Component {
     render() {
         const { id, name, email, phone, company } = this.props;
