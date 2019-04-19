@@ -13,7 +13,7 @@
 }
 
 .search .search__input {
-    padding: .5em;
+    padding: 1em;
     flex-grow: 1;
     font-size: inherit;
     border: none;
