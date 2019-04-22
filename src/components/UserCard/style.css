@@ -11,16 +11,34 @@
     padding: 0.5rem;
     font-size: 1.4rem;
     width: 400px;
-    margin: 2rem 0;
+    margin: 2rem;
  }
 
 .user-card img{
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
-    margin: 2rem;
+    margin: auto;
 }
 
 .user-card__profile .user-card__info .user-card__info-emoji {
     padding-right: 1rem;
+}
+
+
+@media only screen and (max-width: 415px){
+    .user-card{
+        width: 360px;
+    }
+
+    .user-card img{
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .user-card{
+        width: 320px;
+    }
 }

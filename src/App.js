@@ -6,10 +6,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <section className="App-header">
             <h1>Team App</h1>
             <UserCardList />
-        </header>
+        </section>
       </div>
     );
   }

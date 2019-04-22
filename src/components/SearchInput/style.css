@@ -18,7 +18,8 @@
     font-size: inherit;
     border: none;
     background-color: #EEE;
-    border-radius: 3px 0 0 3px;
+    border-radius: 3px;
+
 }
 
 .search .search__input:focus {
@@ -44,39 +45,3 @@
     font-weight: normal;
     font-style: italic;
 }
-
-.search .search__btn {
-    font-size: inherit;
-    border: none;
-    background-color: #D83C3C;
-    color: #fff;
-    padding: 0.3em .8em;
-    cursor: pointer;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
-    border-radius: 0 3px 3px 0;
-}
-
-.search .search__btn:hover {
-    background-color: #e54040;
-}
-
-.search .search__btn:active,
-.search .search__btn:focus{
-    background: #c42f2f;
-    outline: 0;
-}
-
-.search .search__btn:focus:before,
-.search .search__btn:active:before{
-    border-right-color: #c42f2f;
-}
-
-.search .search__btn::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
-    border: 0;
-    padding: 0;
-}
-
-
-
-
-
