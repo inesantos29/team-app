@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
+import {UserCardInfo} from "../UserCardInfo";
 
 import "./style.css"
 
-
-/*
-function UserCardInfo({ children, emoji }) {
-    return (
-        <p className="user-card__info">
-            <span className="user-card__info-emoji">{emoji}</span>
-            {children}
-        </p>
-    )
-}*/
 
 class UserCard extends Component {
     render() {
@@ -22,22 +13,10 @@ class UserCard extends Component {
             <div className="user-card">
                 <img className="user-card__img" src={`https://api.adorable.io/avatars/100/${id}`}/>
                 <div className="user-card__profile">
-                    <p className="user-card__info">
-                        <span className="user-card__info-emoji">👤</span>
-                        {name}
-                    </p>
-                    <p className="user-card__info">
-                        <span className="user-card__info-emoji">💼</span>
-                        {company.name}
-                    </p>
-                    <p className="user-card__info">
-                        <span className="user-card__info-emoji">📞</span>
-                        {phone}
-                    </p>
-                    <p className="user-card__info">
-                        <span className="user-card__info-emoji">📧</span>
-                        {email}
-                    </p>
+                    <UserCardInfo children={name} emoji={"👤"}>{name}</UserCardInfo>
+                    <UserCardInfo children={company.name} emoji={"💼"}>{company.name}</UserCardInfo>
+                    <UserCardInfo children={phone} emoji={"📞"}>{phone}</UserCardInfo>
+                    <UserCardInfo children={email} emoji={"📧"}>{email}</UserCardInfo>
                 </div>
             </div>
        )
@@ -46,6 +25,6 @@ class UserCard extends Component {
 
 UserCard.propTypes = {
     id: propTypes.number.isRequired,
-}
+};
 
 export default UserCard;

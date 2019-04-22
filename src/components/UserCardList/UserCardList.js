@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {SearchInput} from "../SearchInput";
 import {UserCard} from "../UserCard";
+
 import "./style.css"
 
 class UserCardList extends Component {
@@ -20,14 +21,14 @@ class UserCardList extends Component {
     handleSearch = (search) => {
         const normalizedSearch = search.toLowerCase();
         const { users } = this.state; // const users = this.state.users;
-        const filteredUsers = search ===  "" ? users : users.filter((u) => u.name.toLowerCase().includes(normalizedSearch) || u.email.toUpperCase().includes(normalizedSearch));
-
+        const filteredUsers = search ===  "" ? users : users.filter((u) =>
+            u.name.toLowerCase().includes(normalizedSearch) || u.email.toLowerCase().includes(normalizedSearch)
+        );
         this.setState({ filteredUsers });
-    }
+    };
 
     render() {
         const {filteredUsers} = this.state;
-
         return (
             <>
                 <SearchInput onChange={this.handleSearch}/>
