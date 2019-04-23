@@ -29,6 +29,7 @@
 @media only screen and (max-width: 415px){
     .user-card{
         width: 360px;
+        margin: 2rem 0;
     }
 
     .user-card img{
