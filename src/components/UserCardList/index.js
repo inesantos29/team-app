@@ -10,14 +10,19 @@ export const UserCardList = () => {
     const [filteredUsers, setFilteredUsers] = useState([]);
    
 
-    useEffect(async () => {
-        const response = await axios.get(
-          'https://jsonplaceholder.typicode.com/users'
-        );
-        const users = response.data;
+    useEffect( () => {
+        async function fetchUsers() {
+            const response = await 
+            axios.get(
+                'https://jsonplaceholder.typicode.com/users'
+            )
+            const users = response.data
+
+            setUsers(users)
+            setFilteredUsers(users)
+        }
         
-        setUsers(users);
-        setFilteredUsers(users)
+        fetchUsers()
     }, []);
 
     const handleSearch = (search) => {
@@ -27,7 +32,6 @@ export const UserCardList = () => {
         )
         setFilteredUsers(filteredUsers);
     };
-
 
     const renderCard = (user) => {
         return (
@@ -45,7 +49,7 @@ export const UserCardList = () => {
 
     return (
         <>
-            <SearchBar onChange={handleSearch}/>
+            <SearchBar handleSearch={handleSearch}/>
             <ContainerUserCardList>
                 {filteredUsers.map((user) => renderCard(user))}
             </ContainerUserCardList>
@@ -53,7 +57,6 @@ export const UserCardList = () => {
     )
     
 }
-
 
 const ContainerUserCardList = styled.div`
     display: flex;
