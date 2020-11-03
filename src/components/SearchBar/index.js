@@ -2,17 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-export const SearchBar = ({onChange}) => (
+export const SearchBar = ({handleSearch}) => (
 
     <SearchForm>
         <SearchInput 
             type="text"
             placeholder="Search by name and email..."
-            onChange={(e) => onChange(e.target.value)}>
+            onChange={(e) => handleSearch(e.target.value)}>
         </SearchInput>
     </SearchForm>
 )
-
 
 const SearchForm = styled.form`
     display: flex;
