@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-export const SearchBar = ({handleSearch}) => (
+export const SearchBar = ({ handleSearch }) => (
 
     <SearchForm>
         <SearchInput 
@@ -25,6 +25,7 @@ const SearchInput = styled.input`
     border: none;
     background-color: #EEE;
     border-radius: 3px;
+    margin-bottom: 40px;
 
 
     &:focus{

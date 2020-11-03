@@ -61,6 +61,6 @@ export const UserCardList = () => {
 const ContainerUserCardList = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 `
 
