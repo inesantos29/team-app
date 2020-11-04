@@ -1,6 +1,6 @@
 ## Team Application
 
-Team App - a simple webpage that lists the current Team data.
+Team App - a simple webpage that lists the current Team data with a search filter.
 
 The project consist:
 1. Provide users the ability to search by name or email (and other attributes, optional).
