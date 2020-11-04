@@ -5,7 +5,7 @@ import propTypes from 'prop-types'
 import { UserCardInfo } from '../UserCardInfo';
 
 export const UserCard = ({id, name, email, phone, address, company}) => (
-    <ContainerUserCard>
+    <ContainerUserCard tabIndex={0}>
        <UserCardImage alt="avatar" src={`https://source.unsplash.com/collection/${id}/400x300`}/>
        <UserCardProfile>
             <UserCardInfo children={name} emoji={"👤"}>{name}</UserCardInfo>
